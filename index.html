@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div id="page" class="d-flex flex-col">
+        <header class="d-flex">
+            <h1 id="title">Todo</h1>
+            <button id="menu">Menu</button>
+        </header>
+        <section id="container">
+            <aside id="menu-list" class="d-flex flex-col">
+                <div class="d-flex flex-col">
+                    <button id="inbox">Inbox</button>
+                    <button id="today">Today</button>
+                    <button id="weekly">This week</button>
+                </div>
+                <div class="d-flex flex-col">
+                    <h3 class="tag">Projects</h3>
+                    <div id="project-list" class="d-flex flex-col">
+                        <div id="projects" class="d-flex flex-col">
+                            <!-- insert created projects here -->
+                            
+                        </div>
+                        <button id="add-proj-popup">&plus; Add project</button>
+                        <div id="add-proj-form" class="d-flex flex-col hidden">
+                            <div id="proj-inputs" class="d-flex flex-col">
+                                <label for="proj-name">Project Name:</label>
+                                <input type="text" id="proj-name">
+                            </div>
+                            <div id="add-proj-option" class="d-flex">
+                                <button id="add-proj-btn">Add</button>
+                                <button id="cancel-proj-btn">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main id="content" class="d-flex flex-col">
+                <div id="content-title" class="d-flex">
+                    <h2 id="content-name">Inbox</h2>
+                    <button id="delete-project" class="hidden">Delete Project</button>
+                </div>
+                <div id="task-container" class="d-flex flex-col">
+                    <!-- insert tasks here -->
+
+                </div>
+                <button id="add-task-popup" class="no-margin">Add Task</button>
+                <div id="add-task-form" class="d-flex flex-col hidden">
+                    <div id="task-inputs" class="d-flex flex-col">
+                        <label for="task-name">task:</label>
+                        <input type="text" id="task-name">
+                        <label for="task-date">due:</label>
+                        <input type="date" id="task-date">
+                    </div>
+                    <div id="add-task-option" class="d-flex">
+                        <button id="add-task-btn">Add</button>
+                        <button id="cancel-task-btn">Cancel</button>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <footer class="d-flex">
+            <p id="footer"><a href="#">Todo List</a> by <a href="#">Lits</a></p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
