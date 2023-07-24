@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --primary: #222831;
+    --secondary: #393E46;
+    --white: #EEEEEE;
+    --highlight: #FFD369;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#page{
+    min-height: 100vh;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+header{
+    border-bottom: solid 1px var(--highlight);
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0 1rem 0;
+}
+
+header, footer, .tag{
+    background-color: var(--primary);
+    color: var(--highlight);
+}
+
+header, .task, .task-details, footer{
+    align-items: center;
+}
+
+#title{
+    font-family: 'Orbitron', sans-serif !important;
+    text-shadow: 2px 2px 4px var(--highlight);
+}
+
+/* Main content */
+#container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* Sidebar setting */
+#menu-list{
+    background-color: var(--secondary);
+    transition: all 1s ease-in-out;
+}
+
+.set-container{
+    grid-template-columns: 1fr !important;
+}
+
+.tag{
+    font-family: 'Poppins', sans-serif;
+    padding: .5rem 0 .5rem 1rem;
+}
+
+/* Button/pop-up setting */
+button{
+    background-color: inherit;
+    border-radius: .5rem;
+    border-style: none;
+    color: var(--white);
+    font-size: 1rem;
+    margin: .5rem;
+    padding: 0 .5rem;
+}
+
+button:hover{
+    background-color: var(--primary);
+    color: var(--highlight);
+    cursor: pointer;
+}
+
+.status:hover {
+    cursor: pointer;
+}
+
+/* Display setting */
+#content{
+    background-color: var(--primary);
+    gap: .5rem;
+    min-height: 85vh;
+    padding: 2rem 6rem;
+}
+
+#content-title{
+    color: var(--highlight);
+    justify-content: space-between;
+}
+
+#task-container{
+    gap: .5rem;
+}
+
+.task{
+    border: solid 1px;
+    border-radius: .3rem;
+    color: #FFD369;
+    padding: 0.2rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.task-file:hover{
+    transform: scale(1.01);
+}
+
+.task-details{
+    flex: 1;
+    justify-content: space-between;
+    padding-left: .5rem;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+/* Add task pop-up */
+#add-task-popup{
+    background-color: var(--white);
+    color: var(--primary);
+    transition: all 0.2s ease-in-out;
+}
+
+#add-task-popup:hover{
+    background-color: var(--highlight);
+    color: var(--primary);
+    transform: scale(1.01);
+}
+
+#add-task-form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+label{
+    color: var(--white);
+}
+
+#add-task-option{
+    justify-content: center;
+}
+
+.button-active, .hidden{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.crossed{
+    text-decoration: line-through;
+    color: var(--secondary);
+}
+
+/* Add project pop-up */
+#add-proj-form{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: .5rem;
+}
+
+#add-proj-option{
+    justify-content: center;
+}
+
+#delete-project{
+    background-color: var(--secondary);
+    margin: 0;
+}
+
+#delete-project:hover{
+    background-color: red;
+    color: var(--white);
+}
+
+footer{
+    border-top: solid 1px var(--highlight);
+    position: relative;
+    bottom: 0;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+}
+
+#footer{
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+a:hover{
+    color: var(--highlight);
+}
+
+@media only screen and (max-width: 600px){
+    #container{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #content{
+        padding: 2rem;
+    }
+}
